@@ -32,7 +32,7 @@ class CategoryViewController: UIViewController, SetCategoryDelegate  {
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
-        
+
         tableView.register(UINib(nibName: K.categoryCellNib, bundle: nil), forCellReuseIdentifier: K.categoryCellIdentifier)
 
         loadCategories()
@@ -124,6 +124,8 @@ extension CategoryViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         if categories?[indexPath.row] != nil {
             
             currentCategory = categories?[indexPath.row]
@@ -131,6 +133,8 @@ extension CategoryViewController: UITableViewDelegate {
             performSegue(withIdentifier: K.goToContactsIdentifier, sender: self)
             
         }
+        
+        
             
             
 //        do {

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Océane Nicolle. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct K {
     
@@ -17,6 +17,16 @@ struct K {
     static let contactCellNib = "ContactCell"
     static let addNewCategoryIdentifier = "AddNewCategory"
     static let goToContactsIdentifier = "GoToContacts"
+    static let goToContactDetailsIdentifier = "GoToContactDetails"
     
-    
+    struct AppColor {
+
+        static let border        = UIColor(named: "Border")!
+        static let theme        = UIColor(named: "Theme")!
+        static let navigation    = UIColor(named: "Navigation")!
+        static let black75       = UIColor.black.withAlphaComponent(0.75)
+        static let black50       = UIColor.black.withAlphaComponent(0.50)
+        static let black25       = UIColor.black.withAlphaComponent(0.25)
+    }
+
 }

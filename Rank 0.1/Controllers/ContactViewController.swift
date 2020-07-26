@@ -40,7 +40,10 @@ class ContactViewController: UIViewController {
     
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
+        let editProfileView = EditProfileView()
+        let navController = NavigationController(rootViewController: editProfileView)
+        navController.modalPresentationStyle = .fullScreen
+        present(navController, animated: true)
     }
     
     
